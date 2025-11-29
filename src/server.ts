@@ -8,7 +8,7 @@ const app = express();
 // ⭐ FIX 1: Enable CORS
 app.use(
   cors({
-    origin: "http://localhost:5173", // your React app
+    origin: "https://resort-booking-front-end.vercel.app", // our React app FE
     methods: "GET,POST,PUT,DELETE",
     credentials: true,
   })
