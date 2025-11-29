@@ -9,7 +9,7 @@ const validate_1 = __importDefault(require("../middleware/validate"));
 const booking_schema_1 = require("../schemas/booking.schema");
 const router = express_1.default.Router();
 // Create new booking (POST)
-router.post("/", (0, validate_1.default)(booking_schema_1.BookingSchema), booking_controller_1.createBooking);
+router.post("/bookresort", (0, validate_1.default)(booking_schema_1.BookingSchema), booking_controller_1.createBooking);
 // Get all bookings (GET)
-router.get("/", booking_controller_1.getAllBookings);
+router.get("/getresorts", booking_controller_1.getAllBookings);
 exports.default = router;
