@@ -10,8 +10,11 @@ const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 // ⭐ FIX 1: Enable CORS
 app.use((0, cors_1.default)({
-    origin: "http://localhost:5173", // your React app
-    methods: "GET,POST,PUT,DELETE",
+    origin: [
+      "http://localhost:5173",
+      "https://resort-booking-front-end.vercel.app"
+    ], // our React app
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }));
 // ⭐ FIX 2: Parse JSON
